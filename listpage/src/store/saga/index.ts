@@ -13,7 +13,7 @@ import { headData, listData } from './mock';
 
 function* performListSearch(params) {
     try {
-        let data;
+        let data: ListType;
         if (!data) {
             yield put(setListState(ListState.LOADING));
             data = yield call(fetchListData, params);
